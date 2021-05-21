@@ -1,4 +1,4 @@
-var router = Router();
+var router = require('express');
 var bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken');
 
