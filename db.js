@@ -2,6 +2,7 @@ const Sequelize = require('sequelize');
                                 //database username   password
 const sequelize = new Sequelize('gamedb', 'postgres', 'ghastb0i', {
     host: 'localhost',
+    port: 5433,
     dialect: 'postgres'
 })
 
