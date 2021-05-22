@@ -3,7 +3,8 @@ const Sequelize = require('sequelize');
 const sequelize = new Sequelize('gamedb', 'postgres', 'ghastb0i', {
     host: 'localhost',
     port: 5433,
-    dialect: 'postgres'
+    dialect: 'postgres',
+    operatorsAliases: false
 })
 
 sequelize.authenticate().then(
