@@ -22,7 +22,7 @@ router.get('/all', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    Gae.findOmne({ where: { id: req.params.id, owner_id: req.user.id } })
+    Game.findOne({ where: { id: req.params.id, owner_id: req.user.id } })
         .then(
             game => {
                 res.status(StatusCodes.OK).json({
