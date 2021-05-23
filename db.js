@@ -5,16 +5,16 @@ const sequelize = new Sequelize('gamedb', 'postgres', 'ghastb0i', {
     port: 5433,
     dialect: 'postgres',
     operatorsAliases: false
-})
+});
 
 sequelize.authenticate().then(
-    function success() {
+    () => {
         console.log("Connected to DB");
     },
 
-    function fail(err) {
+    err => {
         console.log(`Error: ${err}`);
     }
-)
+);
 
 module.exports = sequelize;
